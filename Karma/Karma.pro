@@ -107,3 +107,13 @@ HEADERS += \
     kimage.h \
     kabstracthdrparser.h \
     kbufferedbinaryfilereader.h
+
+DESTDIR = ../Lib
+
+MOC_DIR = tmp/moc
+
+RCC_DIR = tmp/rcc
+
+UI_DIR = tmp/ui
+
+OBJECTS_DIR = tmp/obj

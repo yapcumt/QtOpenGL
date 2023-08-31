@@ -11,13 +11,15 @@ QT       -= console
 TARGET    = KarmaView
 include(../config.pri)
 
-LIBS += $${KARMA_LIB}
-LIBS += $${OPENGL_LIB}
-LIBS += $${QTBASEEXT_LIB}
+#LIBS += $${KARMA_LIB}
+#LIBS += $${OPENGL_LIB}
+#LIBS += $${QTBASEEXT_LIB}
 
-PRE_TARGETDEPS += $${KARMA_DEP}
-PRE_TARGETDEPS += $${OPENGL_DEP}
-PRE_TARGETDEPS += $${QTBASEEXT_DEP}
+LIBS +=$$PWD/../Lib/lib*.a
+
+#PRE_TARGETDEPS += $${KARMA_DEP}
+#PRE_TARGETDEPS += $${OPENGL_DEP}
+#PRE_TARGETDEPS += $${QTBASEEXT_DEP}
 
 SOURCES += \
     main.cpp \
@@ -58,3 +60,13 @@ RESOURCES += \
 
 FORMS += \
     mainwindow.ui
+
+DESTDIR = ../Lib
+
+MOC_DIR = tmp/moc
+
+RCC_DIR = tmp/rcc
+
+UI_DIR = tmp/ui
+
+OBJECTS_DIR = tmp/obj

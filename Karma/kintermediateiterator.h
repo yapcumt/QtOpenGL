@@ -20,7 +20,7 @@ public:
   // To account for this, we will abuse declype by dereferencing
   // a NULL value to "produce" the reference type.
   // C++17>= code should probably opt for To::reference typedef.
-  typedef decltype(**((typename To*)NULL))& reference;
+  typedef decltype(**((To*)NULL))& reference;
 
   explicit KIntermediateIterator(FromIterator from);
   explicit KIntermediateIterator(FromIteratorConst from);
